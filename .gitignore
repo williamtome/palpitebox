@@ -1,0 +1,5 @@
+node_modules
+pages/api/credentials.json
+.next
+.env.local
+credentials.json
