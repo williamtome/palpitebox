@@ -2,7 +2,7 @@
 
 Este projeto foi construído durante o treinamento Fullstack Master do [DevPleno](https://devpleno.com). Uma versão online deste projeto pode ser encontrada em: https://palpitebox.williamtome.vercel.app/
 
-![Preview](https://github.com/williamtome/palpitebox/print.png?raw=true)
+![Preview](https://github.com/williamtome/palpitebox/blob/master/print.png?raw=true)
 
 ### Início
 
