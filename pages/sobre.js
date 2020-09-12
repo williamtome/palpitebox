@@ -12,6 +12,10 @@ const Sobre = () => {
           <br/> que também foi usado como projeto base durante a Semana Fullstack Master realizada em julho de 2020.
         </p>
         <p>
+          Este sistema consiste em saber como está a satisfação dos clientes de um restaurante ou estabelecimento afim de melhorar 
+          o atendimento. <br/>Ao final da pesquisa o sistema emite um cupom de desconto para a próxima compra, como cortesia para o cliente.
+        </p>
+        <p>
           <h4 className='pt-10 pb-6 text-3xl'>Tecnologias utilizadas</h4>
         </p>
         <div>
