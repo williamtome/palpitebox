@@ -7,13 +7,13 @@ const Contato = () => {
     <div className='pt-16 pb-16'>
       <PageTitle title='Contato' />
       <div className='container mx-auto text-center'>
-        <div className='mb-6'>
-          <strong>E-mail:</strong>
-          <p>william.tomenh@gmail.com</p>
+        <div className='inline-block w-full mb-6'>
+          <img className='inline w-8 mr-4' src="/gmail.png" alt="Gmail"/>
+          <p className='inline'>william.tomenh@gmail.com</p>
         </div>
-        <div className='mt-6'>
-          <strong>Contato/Whatsapp:</strong>
-          <p>(51) 99303.8350</p>
+        <div className='inline-block mt-6'>
+          <img className='inline w-8 mr-4' src="/whatsapp.png" alt="Whatsapp"/>
+          <p className='inline'>(51) 99303.8350</p>
         </div>
       </div>
       <div className='text-center pt-10 text-green-800'>
