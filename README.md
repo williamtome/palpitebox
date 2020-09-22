@@ -1,6 +1,5 @@
-<div style="text-align:center">
 ![Preview](https://github.com/williamtome/palpitebox/blob/master/public/logo_palpitebox.png?raw=true)
-</div>
+
 # Palpitebox
 
 Este projeto foi construído durante o treinamento Fullstack Master do [DevPleno](https://devpleno.com). Uma versão online deste projeto pode ser encontrada em: https://palpitebox.williamtome.vercel.app/
