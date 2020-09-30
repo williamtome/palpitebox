@@ -1,4 +1,4 @@
-![Preview](https://github.com/williamtome/palpitebox/blob/master/public/logo_palpitebox.png?raw=true)
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/williamtome/palpitebox/blob/master/public/logo_palpitebox.png?raw=true"></a></p>
 
 # Palpitebox
 
