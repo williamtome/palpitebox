@@ -39,7 +39,7 @@ SHEET_DOC_ID=id da planilha
 * [Figma](https://figma.com/) - Online prototyping tool.
 * [Google Sheet](https://drive.google.com) - Planilhas online do Google.
 
-## Authors:
+## Autores:
 
 * **Tulio Faria** - [LinkedIn](https://www.linkedin.com/in/tuliofaria/)
 * **William Weirich Tomé** - [Linkedin](https://www.linkedin.com/in/williamtome/)
