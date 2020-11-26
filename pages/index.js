@@ -11,8 +11,9 @@ const Index = () => {
     <div>
       <PageTitle title='Home' />
       <div>
-        <p className="mt-6 text-center">
-          O restaurante X sempre busca por atender melhor seus clientes.<br/>
+        <p className="mt-12 text-center text-7x1">Seja Bem-vindo(a)</p>
+        <p className="mt-12 text-center">
+          O restaurante Prato Saboroso sempre busca por atender melhor seus clientes.<br/>
           Por isso, estamos sempre abertos a ouvir sua opinião.
         </p>
         <div className='text-center my-12'>
@@ -22,9 +23,9 @@ const Index = () => {
             </a>
           </Link>
         </div>
-        { !data && <p>Carregando...</p> }
+        { !data && <p className='my-12 text-center'>Carregando...</p> }
         { !error && data && data.showCoupon &&
-          <p className="my-6 text-center">
+          <p className="my-12 text-center">
             {data.message}
           </p>
         }
