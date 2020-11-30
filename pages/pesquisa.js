@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PageTitle from '../components/PageTitle'
+import * as yup from 'yup'
 
 const Pesquisa = () => {
   
@@ -10,6 +11,18 @@ const Pesquisa = () => {
     Critica: '', 
     Nota: 0,
     Indica: ''
+  })
+
+  const PesquisaSchema = yup.object().shape({
+    Nome: yup.string().required('Informe seu nome completo.'),
+    Email: yup.string().required('Informe um e-mail válido.'),
+    Whatsapp: yup.string()
+      .required('Informe o seu WhatsApp.')
+      .min(11)
+      .max(15),
+    Critica: yup.string().required('Por favor, insira a sua opinião.'),
+    Nota: yup.number().required('informe sua nota.'),
+    Indica: yup.boolean().required('Selecione uma das opções.')
   })
 
   const notas = [0, 1, 2, 3, 4, 5]
