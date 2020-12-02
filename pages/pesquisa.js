@@ -76,10 +76,10 @@ const Pesquisa = () => {
           {
             notas.map(nota => {
               return (
-                <label className='block w-1/6 text-center'> 
+                <div key={nota} className='block w-1/6 text-center'> 
                   {nota} <br/>
                   <input type="radio" name='Nota' value={nota} onChange={onChange}/> 
-                </label>
+                </div>
               )
             })
           }
@@ -89,10 +89,10 @@ const Pesquisa = () => {
           {
             indicacoes.map(indicacao => {
               return (
-                <label className="block w-1/2 text-center">
+                <div key={indicacao} className="block w-1/2 text-center">
                   {indicacao} <br/>
                   <input type="radio" name="Indica" value={indicacao} onChange={onChange}/>
-                </label>
+                </div>
               )
             })
           }
