@@ -14,11 +14,13 @@ const Pesquisa = () => {
   })
 
   const PesquisaSchema = yup.object().shape({
-    Nome: yup.string().required('Informe seu nome completo.'),
-    Email: yup.string().required('Informe um e-mail válido.'),
+    Nome: yup.string()
+      .min(3, 'Por favor, informe pelo menos um nome com 3 caracteres.')
+      .required('Informe seu nome completo.'),
+    Email: yup.string()
+      .required('Informe um e-mail válido.'),
     Whatsapp: yup.string()
       .required('Informe o seu WhatsApp.')
-      .min(11)
       .max(15),
     Critica: yup.string().required('Por favor, insira a sua opinião.'),
     Nota: yup.number().required('informe sua nota.'),
@@ -47,6 +49,8 @@ const Pesquisa = () => {
     const value = event.target.value
     const key = event.target.name
     console.log(key, value);
+    PesquisaSchema.isValid(value)
+      .then(valid => console.log(valid))
     setForm(old => ({
       ...old,
       [key]: value
