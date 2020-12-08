@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "formik": "^2.2.5",
     "google-spreadsheet": "^3.0.13",
     "moment": "^2.27.0",
     "next": "^9.5.1",
