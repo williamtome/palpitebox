@@ -1,8 +1,17 @@
 import React, { useState } from 'react'
 import PageTitle from '../components/PageTitle'
+import * as Yup from 'yup'
 
 const Pesquisa = () => {
   
+  /*
+    Nome: string required,
+    Email: email, required,
+    Whatsapp: string, max: 15, required, 
+    Critica: string, required, 
+    Nota: number, required,
+    Indica: boolean required
+  */
   const [ form, setForm ] = useState({
     Nome: '',
     Email: '',
@@ -16,6 +25,38 @@ const Pesquisa = () => {
   const indicacoes = ['Sim', 'Não']
   const [success, setSuccess] = useState(false)
   const [retorno, setRetorno] = useState({})
+  // console.log(form);
+
+  const PesquisaSchema = Yup.object().shape({
+    Nome: Yup
+      .string()
+      .required('Nome é obrigatório!'),
+    Email: Yup
+      .string()
+      .email()
+      .required('Email é obrigatório!'),
+    Whatsapp: Yup
+      .string()
+      .required('Whatsapp é obrigatório!'), 
+    Critica: Yup
+      .string()
+      .required('Crítica é obrigatório!'), 
+    Nota: Yup
+      .number()
+      .positive()
+      .required('Nota é obrigatório!'),
+    Indica: Yup
+      .string()
+      .required('Indica é obrigatório!')
+  })
+
+  const formData = PesquisaSchema.cast(form)
+  console.log(formData);
+  PesquisaSchema.isValid(formData)
+    .then(valid => console.log('É válido ? ', valid))
+    .catch(err => console.log(err))
+  
+    
 
   const save = async() => {
     try {
@@ -50,13 +91,37 @@ const Pesquisa = () => {
       </p>
       {!success && <div className='w-1/4 mx-auto'>
         <label className='font-bold'>Seu nome:</label>
-        <input type="text" className='w-full p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+        <input type="text" 
+          className='w-full p-4 block shadow bg-blue-100 my-2 rounded' 
+          placeholder='Nome' 
+          onChange={onChange} 
+          name='Nome' 
+          value={form.Nome} />
+
         <label className='font-bold'>E-mail:</label>
-        <input type="text" className='w-full p-4 block shadow bg-blue-100 my-2 rounded' placeholder='E-mail' onChange={onChange} name='Email' value={form.Email}/>
+        <input type="text" 
+          className='w-full p-4 block shadow bg-blue-100 my-2 rounded' 
+          placeholder='E-mail' 
+          onChange={onChange} 
+          name='Email' 
+          value={form.Email}/>
+
         <label className='font-bold'>Whatsapp:</label>
-        <input type="text" className='w-full p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp}/>
+        <input type="text" 
+          className='w-full p-4 block shadow bg-blue-100 my-2 rounded' 
+          placeholder='Whatsapp' 
+          onChange={onChange} 
+          name='Whatsapp' 
+          value={form.Whatsapp}/>
+
         <label className='font-bold'>Sua crítica ou sugestão:</label>
-        <input type="text" className='w-full p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Descreva aqui.' onChange={onChange} name='Critica' value={form.Critica}/>
+        <input type="text" 
+          className='w-full p-4 block shadow bg-blue-100 my-2 rounded' 
+          placeholder='Descreva aqui.'
+          onChange={onChange} 
+          name='Critica' 
+          value={form.Critica}/>
+
         <label className='font-bold'>Nota:</label>
         <div className='flex py-6'>
           {
