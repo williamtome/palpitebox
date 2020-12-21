@@ -15,12 +15,12 @@ const Header = () => {
         </div>
       </div>
       <div className="bg-gray-400 p-4 shadow-md text-center">
-        {/* <Link href="/sobre">
+        <Link href="/sobre">
           <a className="px-2 hover:underline">Sobre</a>
         </Link>
         <Link href="/contato">
           <a className="px-2 hover:underline">Contato</a>
-        </Link> */}
+        </Link>
         <Link href="/pesquisa">
          <a className="px-2 hover:underline">Pesquisa</a>
         </Link>
