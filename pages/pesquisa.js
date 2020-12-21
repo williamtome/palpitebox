@@ -4,14 +4,6 @@ import * as Yup from 'yup'
 
 const Pesquisa = () => {
   
-  /*
-    Nome: string required,
-    Email: email, required,
-    Whatsapp: string, max: 15, required, 
-    Critica: string, required, 
-    Nota: number, required,
-    Indica: boolean required
-  */
   const [ form, setForm ] = useState({
     Nome: '',
     Email: '',
@@ -56,8 +48,6 @@ const Pesquisa = () => {
     .then(valid => console.log('É válido ? ', valid))
     .catch(err => console.log(err))
   
-    
-
   const save = async() => {
     try {
       const response = await fetch('/api/save', {
