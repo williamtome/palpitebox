@@ -9,17 +9,16 @@ const PesquisaSchema = Yup.object().shape({
     .required('Nome é obrigatório!'),
   Email: Yup
     .string()
-    .email()
+    .email('Por favor, informe um e-mail válido!')
     .required('Email é obrigatório!'),
   Whatsapp: Yup
     .string()
     .required('Whatsapp é obrigatório!'), 
   Critica: Yup
     .string()
-    .required('Crítica é obrigatório!'), 
+    .required('Crítica/Sugestão é obrigatório!'), 
   Nota: Yup
     .number()
-    .positive()
     .required('Nota é obrigatório!'),
   Indica: Yup
     .string()
@@ -45,8 +44,8 @@ const Pesquisa = () => {
     validationSchema: PesquisaSchema,
     onSubmit: values => {
       console.log(values)
-      save
-      setSubmitting(false)
+      save()
+      setSubmitting(true)
     }
   })
   
@@ -63,14 +62,6 @@ const Pesquisa = () => {
     }
   }
 
-  // const onChange = event => {
-  //   const value = event.target.value
-  //   const key = event.target.name
-  //   setForm(old => ({
-  //     ...old,
-  //     [key]: value
-  //   }));
-  // }
   return (
     <div className="pt-6">
       <PageTitle title='Pesquisa' />
@@ -93,7 +84,7 @@ const Pesquisa = () => {
             value={formik.values.Nome}
           />
           {formik.errors.Nome ? (
-            <div>{formik.errors.Nome}</div>
+            <div className='text-red-700'>{formik.errors.Nome}</div>
           ) : null}
 
           <label className='font-bold'>E-mail:</label>
@@ -106,7 +97,7 @@ const Pesquisa = () => {
             value={formik.values.Email}
           />
           {formik.errors.Email ? (
-            <div>{formik.errors.Email}</div>
+            <div className='text-red-700'>{formik.errors.Email}</div>
           ) : null}
 
           <label className='font-bold'>Whatsapp:</label>
@@ -119,7 +110,7 @@ const Pesquisa = () => {
             value={formik.values.Whatsapp}
           />
           {formik.errors.Whatsapp ? (
-            <div>{formik.errors.Whatsapp}</div>
+            <div className='text-red-700'>{formik.errors.Whatsapp}</div>
           ) : null}
 
           <label className='font-bold'>Sua crítica ou sugestão:</label>
@@ -132,7 +123,7 @@ const Pesquisa = () => {
             value={formik.values.Critica}
           />
           {formik.errors.Critica ? (
-            <div>{formik.errors.Critica}</div>
+            <div className='text-red-700'>{formik.errors.Critica}</div>
           ) : null}
 
           <label className='font-bold'>Nota:</label>
@@ -148,6 +139,9 @@ const Pesquisa = () => {
               })
             }
           </div>
+          {formik.errors.Nota ? (
+            <div className='text-red-700'>{formik.errors.Nota}</div>
+          ) : null}
           <label className='font-bold'>Você nos indicaria para um(a) amigo(a)?</label>
           <div className='flex py-6'>
             {
@@ -161,7 +155,10 @@ const Pesquisa = () => {
               })
             }
           </div>
-          <button className='w-full bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow mb-6'>Enviar</button>        
+          {formik.errors.Indica ? (
+            <div className='text-red-700'>{formik.errors.Indica}</div>
+          ) : null}
+          <button type='submit' className='w-full bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow mb-6'>Enviar</button>        
         </form>
       </div>}
       {success && <div className='w-1/5 mx-auto'>
