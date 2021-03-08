@@ -42,7 +42,7 @@ const Pesquisa = () => {
       Nota: 0,
       Indica: ''
     },
-    validationSchema: { PesquisaSchema },
+    validationSchema: PesquisaSchema,
     onSubmit: values => {
       console.log(values)
       save
