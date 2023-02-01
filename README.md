@@ -2,7 +2,7 @@
 
 # Palpitebox
 
-Este projeto foi construído durante o treinamento Fullstack Master do [DevPleno](https://devpleno.com). Uma versão online deste projeto pode ser encontrada em: https://palpitebox.williamtome.vercel.app/
+Este projeto foi construído durante o treinamento Fullstack Master do [DevPleno](https://devpleno.com). Uma versão online deste projeto pode ser encontrada em: https://palpitebox.williamtome.dev
 
 ![Preview](https://github.com/williamtome/palpitebox/blob/master/print.png?raw=true)
 
@@ -38,11 +38,6 @@ SHEET_DOC_ID=id da planilha
 * [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 * [Figma](https://figma.com/) - Online prototyping tool.
 * [Google Sheet](https://drive.google.com) - Planilhas online do Google.
-
-## Autores:
-
-* **William Weirich Tomé** - [Linkedin](https://www.linkedin.com/in/williamtome/)
-
 
 ## Licença
 
